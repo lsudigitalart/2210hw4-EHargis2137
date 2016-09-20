@@ -115,14 +115,14 @@ function draw(){
     ball.position.x = 350;
     ball.setSpeed(speed,random(-70, 70));
     scoreleft++;
-    swag -= 5;
+    swag -= 15;
     background(246, 149, 188, swag);
   }
   if(ball.position.x>width) {
     ball.position.x = 350;
     ball.setSpeed(speed,random(-70, 70));
     scoreright++;
-    swag -= 5;
+    swag -= 15;
     background(246, 149, 188, swag);
     }
   if(ball.position.y<0) {
@@ -138,6 +138,7 @@ function draw(){
   if(scoreleft == 10 || scoreright == 10){
     scoreleft = 0;
     scoreright = 0;
+    swag = 100;
   }
 
    drawSprites();
